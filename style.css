@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+span img{
+    padding-top: 10px;
+    height: 40px;
+    width: 40px;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    background: -webkit-linear-gradient(90deg, rgba(51,161,147,1) 0%, rgba(54,172,39,1) 0%, rgba(17,227,244,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 210px;
+    display: flex;
+    align-items: center;
+}
+ul{
+    display: flex;
+    width: 300px;
+    height: 80px;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    
+}
+ul .nav a:hover{
+    font-style: bold;
+    transition-duration: .2s;
+    color: white;
+}
+h1{
+    color: white;
+}
+.nav{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+}
+nav .nav a{
+    transition-duration: .2s;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: green;
+}
+.container{
+    position: relative;
+    background: linear-gradient(90deg, rgba(51,161,147,1) 0%, rgba(54,172,39,1) 0%, rgba(17,227,244,1) 100%);
+    height: 80vh;
+    min-width: 100%;
+    flex-direction: column;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.cheat-contaiiner{
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 5px solid green;
+    /* margin-top: 10px; */
+    background-color: rgb(29, 27, 27);
+    height: 500px;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.cheats{
+    margin-top: 20px;
+    user-select: none;
+}
+.cheats:hover{
+    border-bottom: 3px solid green;
+    border-top: 3px solid green;
+    transition: .09s;
+
+}
+h2{
+    margin: 0 10px;
+    align-self: center;
+    color: white;
+}
+.cheats{
+    margin-left: 30px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+.popcontent img{
+    height: 20px;
+    width: 20px;
+}
+.popupbox1,.popupbox2,.popupbox3,.popupbox4,.popupbox5,
+.popupbox6,.popupbox7,.popupbox8,.popupbox9,.popupbox10{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 180px;
+    width: 400px;
+    background: linear-gradient(90deg, rgba(51,161,147,1) 0%, rgba(54,172,39,1) 0%, rgba(17,227,244,1) 100%);
+    border: 5px solid black;
+    border-radius: 20px;
+    animation-name: popanimation;
+    animation-duration: .9s;
+    /* animation-delay: .2s; */
+    animation-iteration-count: 1;
+    transition-duration: .5s;
+    margin-top: 200px;
+    margin-left: 200px;
+    box-shadow: 0px 0px 20px 1px rgb(0, 255, 170);
+    /* in order: x offset, y offset, blur size, spread size, color */
+}
+.popcontent{
+    animation-name: popcontentShow;
+    animation-duration: 2s;
+    /* animation-delay: .2s; */
+    animation-iteration-count: 1;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 57px;
+}
+.copyright{
+    color: white;
+}
+@keyframes popanimation {
+    from{
+        height: 0px;
+        width: 0px;
+    }
+    to{
+        height: 180px;
+        
+    }
+}
+@keyframes popcontentShow {
+    from{opacity: 0;}
+    to{opacity: 100;}
+}
+
+
+@media (max-width: 415px){
+    .cheat-contaiiner{
+        width: 350px;
+    }
+    .popupbox1,.popupbox2,.popupbox3,.popupbox4,.popupbox5,
+    .popupbox6,.popupbox7,.popupbox8,.popupbox9,.popupbox10{
+        height: 200px;
+        width: 200px;
+    }
+    .popcontent{
+        width: 190px;
+    }
+    .cheats{
+        margin-left: 20px;
+    }
+}
